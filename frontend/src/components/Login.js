@@ -36,6 +36,15 @@ const Login = () => {
         </div>
         
         <form className="mt-8 space-y-6 bg-white p-8 rounded-lg card-shadow" onSubmit={handleSubmit}>
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-md p-4">
+              <div className="flex">
+                <AlertCircle className="h-5 w-5 text-red-400 mr-2" />
+                <div className="text-sm text-red-700">{error}</div>
+              </div>
+            </div>
+          )}
+          
           <div className="space-y-4">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
