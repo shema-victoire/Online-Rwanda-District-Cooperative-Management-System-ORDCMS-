@@ -36,7 +36,12 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    await register(formData);
+    setError('');
+    
+    const success = await register(formData);
+    if (!success) {
+      setError('Registration failed. Email may already be registered or invalid data provided.');
+    }
     setIsLoading(false);
   };
 
