@@ -14,7 +14,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    await login(email, password);
+    setError('');
+    
+    const success = await login(email, password);
+    if (!success) {
+      setError('Invalid email or password. Please try again.');
+    }
     setIsLoading(false);
   };
 
