@@ -13,6 +13,7 @@ const Register = () => {
     phone: ''
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
   const { register } = useAuth();
 
   const districts = [
