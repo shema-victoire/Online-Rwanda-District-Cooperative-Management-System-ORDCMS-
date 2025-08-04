@@ -1,0 +1,25 @@
+/* Custom styles for Rwanda Cooperative Management System */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #0EA5E9 0%, #10B981 100%);
+}
+
+.card-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.btn-primary {
+  @apply bg-rwanda-blue hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-rwanda-green hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200;
+}
+
+.input-field {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rwanda-blue focus:border-transparent;
+}
